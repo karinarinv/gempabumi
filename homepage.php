@@ -54,7 +54,6 @@ $cards = [
         </ul>
     </nav>
 
-    <?php include 'navbar.php'; ?>
     <section class="hero">
         <div class="hero-content">
             <h1>Waspada, Kenali, dan Siaga terhadap Gempa Bumi</h1>
