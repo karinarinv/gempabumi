@@ -43,6 +43,17 @@ $cards = [
 </head>
 <body>
 
+    <nav class="floating-nav">
+        <div class="logo">AwasGempa.id</div>
+        <ul class="nav-links">
+            <li><a href="homepage.php">Beranda</a></li>
+            <li><a href="tentang-gempa-bumi.php">Tentang Gempa Bumi</a></li>
+            <li><a href="penyebab.php" class="active">Penyebab</a></li>
+            <li><a href="dampak.php">Dampak</a></li>
+            <li><a href="penanggulangan.php">Penanggulangan Dan Mitigasi</a></li>
+        </ul>
+    </nav>
+
     <?php include 'navbar.php'; ?>
     <section class="hero">
         <div class="hero-content">
@@ -69,6 +80,9 @@ $cards = [
         <?php endforeach; ?>
     </section>
 
-    <?php include 'footer.php'; ?>
+        <footer class="footer">
+        <p>&copy; 2023 AwasGempa.id - Semua Hak Dilindungi</p>
+        <p>Website Informasi Gempa Bumi Indonesia</p>
+    </footer>
 </body>
 </html>
