@@ -7,60 +7,75 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f7f9; /* Latar belakang abu-abu muda */
-            color: #1a1a1a;
+  :root {
+  --sapphire: #305070;
+    --royal-blue: #112260;
+    --quicksand: #EDC58F;
+    --swan-wing: #F5F0E9;
+    --chellstone: #D9CBC2;
         }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-        
-        .floating-nav {
-            position: sticky;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(17, 34, 80, 0.95); /* Biru tua transparan */
-            backdrop-filter: blur(8px);
-            padding: 1.5rem 3rem; /* Sedikit disesuaikan agar tidak terlalu besar */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-            z-index: 1000;
-        }
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F5F0E9;
+    color: #112250;
+}
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: #7dd3fc; /* Biru muda cerah untuk logo */
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
 
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 2.5rem;
-            margin: 0;
-            padding: 0;
-        }
+.floating-nav {
+    position: sticky;
+    top: 0;                
+    left: 0;
+    width: 100%;          
+    background-color: rgba(17, 34, 80, 0.95);
+    backdrop-filter: blur(8px);                 
+     padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    z-index: 1000;
+}
 
-        .nav-links li a {
-            text-decoration: none;
-            color: #ffffff;
-            font-weight: 600;
-            font-size: 1rem;
-            padding: 0.5rem 0;
-            transition: color 0.3s ease, border-bottom 0.3s ease;
-        }
+.floating-nav .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #E0C58F;
+}
 
-        .nav-links li a:hover,
-        .nav-links li a.active {
-            color: #fcd34d; /* Kuning emas saat hover/aktif */
-            border-bottom: 3px solid #fcd34d;
-        }
+.floating-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.floating-nav ul li a {
+    color: #E0C58F;
+    text-decoration: none;
+    font-weight: 500;
+      padding: 8px 14px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.floating-nav ul li a:hover,
+.floating-nav ul li a.active {
+    color:#8fbae0; 
+            background-color: rgba(255, 255, 255, 0.25);
+}
+
+
+.main-content {
+    padding-top: 140px; 
+}
+
 
         /* Responsive Navbar */
         @media (max-width: 900px) {
@@ -82,30 +97,68 @@
             }
         }
 
-        /* --- STYLING MAIN CONTENT --- */
-        .header {
-            background-color: #112250;
-            color: #ffffff;
-            padding: 5rem 3rem 3rem;
+         .page-header {
+            background: linear-gradient(to right, var(--royal-blue), var(--sapphire));
+            color: var(--swan-wing);
+            padding: 6rem 2rem;
             text-align: center;
-            margin-top: -1px; /* Mengatasi celah kecil */
-            box-shadow: inset 0 -10px 10px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
         }
 
-        .header h1 {
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23000" fill-opacity="0.1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,192C672,181,768,139,864,138.7C960,139,1056,181,1152,197.3C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .page-header h1 {
             font-size: 3rem;
-            margin-bottom: 0.5rem;
-            font-weight: 800;
+            margin-bottom: 1.5rem;
+            position: relative;
+            animation: fadeInDown 1s ease;
         }
 
-        .header p {
+        .page-header p {
             font-size: 1.2rem;
             max-width: 800px;
             margin: 0 auto;
-            color: #a8b3cf;
+            line-height: 1.6;
+            position: relative;
+            animation: fadeInUp 1s ease 0.3s both;
         }
 
-        /* --- STYLING MITIGATION CARDS --- */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+   
         .content-section {
             padding: 3rem 3rem 5rem;
             max-width: 1200px;
@@ -148,7 +201,7 @@
         .mitigation-card ul {
             list-style: none;
             padding-left: 0;
-            flex-grow: 1; /* Agar daftar mengisi ruang yang tersisa */
+            flex-grow: 1; 
         }
 
         .mitigation-card ul li {
@@ -159,14 +212,13 @@
         }
 
         .mitigation-card ul li::before {
-            content: '✓'; /* Ikon centang sebagai bullet */
+            content: '✓'; 
             position: absolute;
             left: 0;
-            color: #059669; /* Warna hijau */
+            color: #059669; 
             font-weight: 700;
         }
 
-        /* Styling for the Before, During, and After sections */
         .step-heading {
             text-align: center;
             font-size: 2.2rem;
@@ -189,26 +241,20 @@
             border-radius: 5px;
         }
 
-        /* --- STYLING FOOTER --- */
-        .footer {
-            background-color: #112250;
-            color: #a8b3cf;
-            text-align: center;
-            padding: 2rem 3rem;
-            font-size: 0.9rem;
-        }
 
-        .footer a {
-            color: #fcd34d;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
+.site-footer { 
+    background: #0b2a57; 
+    text-align: center; 
+    padding: 30px 20px; 
+    color: #E0C58F; 
+}
 
-        .footer a:hover {
-            color: #fff;
-        }
+.site-footer p { 
+    color: #E0C58F; 
+    margin: 5px 0; 
 
-        /* Responsive Grid */
+}
+
         @media (max-width: 768px) {
             .content-section {
                 padding: 2rem 1rem 3rem;
@@ -219,14 +265,6 @@
                 gap: 1.5rem;
             }
 
-            .header {
-                padding: 3rem 1.5rem 2rem;
-            }
-
-            .header h1 {
-                font-size: 2.5rem;
-            }
-
             .mitigation-card {
                 padding: 1.5rem;
             }
@@ -235,29 +273,27 @@
 </head>
 <body>
 
-    <!-- NAV BAR (Diletakkan di luar tag PHP jika hanya menyertakan HTML murni) -->
     <nav class="floating-nav">
         <div class="logo">AwasGempa.id</div>
         <ul class="nav-links">
             <li><a href="homepage.php">Beranda</a></li>
-            <li><a href="tentang-gempa-bumi.php">Tentang Gempa Bumi</a></li>
+            <li><a href="tentanggempa.php">Tentang Gempa Bumi</a></li>
             <li><a href="penyebab.php">Penyebab</a></li>
             <li><a href="dampak.php">Dampak</a></li>
-            <li><a href="penanggulangan.php" class="active">Penanggulangan Dan Mitigasi</a></li>
+            <li><a href="mitigasi.php" class="active">Penanggulangan Dan Mitigasi</a></li>
         </ul>
     </nav>
 
-    <!-- HEADER SECTION -->
-    <div class="header">
+
+    <div class="page-header">
         <h1>Mitigasi dan Kesiapsiagaan Gempa Bumi</h1>
         <p>Kesiapsiagaan adalah kunci. Pelajari langkah-langkah mitigasi struktural dan non-struktural untuk meminimalkan risiko bahaya gempa bumi.</p>
     </div>
 
-    <!-- CONTENT SECTION - MITIGASI SEBELUM GEMPA -->
     <div class="content-section">
         <h2 class="step-heading">1. Langkah-langkah Sebelum Gempa</h2>
         <div class="grid-container">
-            <!-- Card 1: Mitigasi Struktural (Bangunan) -->
+ 
             <div class="mitigation-card">
                 <h3>Mitigasi Struktural</h3>
                 <ul>
@@ -268,7 +304,6 @@
                 </ul>
             </div>
 
-            <!-- Card 2: Mitigasi Non-Struktural (Kesiapan Rumah) -->
             <div class="mitigation-card">
                 <h3>Kesiapan Internal Rumah</h3>
                 <ul>
@@ -279,7 +314,6 @@
                 </ul>
             </div>
 
-            <!-- Card 3: Pendidikan dan Pelatihan -->
             <div class="mitigation-card">
                 <h3>Edukasi dan Pelatihan</h3>
                 <ul>
@@ -291,10 +325,9 @@
             </div>
         </div>
 
-        <!-- CONTENT SECTION - MITIGASI SAAT GEMPA -->
         <h2 class="step-heading">2. Tindakan Saat Terjadi Gempa</h2>
         <div class="grid-container">
-            <!-- Card 4: Dalam Ruangan -->
+            
             <div class="mitigation-card">
                 <h3>Jika Anda di Dalam Ruangan</h3>
                 <ul>
@@ -305,7 +338,7 @@
                 </ul>
             </div>
 
-            <!-- Card 5: Di Luar Ruangan -->
+          
             <div class="mitigation-card">
                 <h3>Jika Anda di Luar Ruangan</h3>
                 <ul>
@@ -317,10 +350,8 @@
             </div>
         </div>
 
-        <!-- CONTENT SECTION - MITIGASI SETELAH GEMPA -->
         <h2 class="step-heading">3. Tindakan Setelah Gempa</h2>
         <div class="grid-container">
-            <!-- Card 6: Pasca Gempa -->
             <div class="mitigation-card">
                 <h3>Langkah Pasca Gempa</h3>
                 <ul>
@@ -334,10 +365,10 @@
         </div>
     </div>
 
-    <!-- FOOTER SECTION -->
-    <footer class="footer">
-        &copy; <?php echo date("Y"); ?> AwasGempa.id. Semua hak dilindungi. | <a href="#">Kebijakan Privasi</a>
-    </footer>
+<footer class="site-footer">
+    <p> &copy; 2023 AwasGempa.id - Semua Hak Dilindungi</p>
+    <p>Website Informasi Gempa Bumi Indonesia</p>
+</footer>
 
 </body>
 
