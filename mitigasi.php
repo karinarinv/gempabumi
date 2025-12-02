@@ -6,7 +6,7 @@
     <title>Mitigasi Gempa Bumi | AwasGempa.id</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Menggunakan font Inter secara default */
+        
         body {
             font-family: 'Inter', sans-serif;
             margin: 0;
@@ -15,7 +15,7 @@
             color: #1a1a1a;
         }
 
-        /* --- STYLING NAVBAR (sesuai permintaan) --- */
+        
         .floating-nav {
             position: sticky;
             top: 0;
@@ -340,4 +340,5 @@
     </footer>
 
 </body>
+
 </html>
