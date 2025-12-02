@@ -8,71 +8,78 @@
     <title>Tentang Gempa Bumi</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #0a2342;
-            color: white;
-            overflow-x: hidden;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+} 
 
-        /* Floating Navbar */
-        .floating-nav {
-            position: sticky;
-            top: 0;
-            width: 100%;
-            background-color: rgba(17, 34, 80, 0.95);
-            backdrop-filter: blur(8px);
-            padding: 2rem 3rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-            z-index: 1000;
-        }
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F5F0E9;
+    color: #112250;
+}
 
-        .floating-nav .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #E0C58F;
-        }
 
-        .floating-nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1.5rem;
-        }
+.floating-nav {
+    position: sticky;
+    top: 0;                
+    left: 0;
+    width: 100%;          
+    background-color: rgba(17, 34, 80, 0.95);
+    backdrop-filter: blur(8px);                 
+     padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    z-index: 1000;
+}
 
-        .floating-nav ul li a {
-            color: #E0C58F;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 8px 14px;
-            border-radius: 10px;
-            transition: 0.3s;
-        }
+.floating-nav .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #E0C58F;
+}
 
-        .floating-nav ul li a:hover,
-        .floating-nav ul li a.active {
+.floating-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.floating-nav ul li a {
+    color: #E0C58F;
+    text-decoration: none;
+    font-weight: 500;
+      padding: 8px 14px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.floating-nav ul li a:hover,
+.floating-nav ul li a.active {
+    color:#8fbae0; 
             background-color: rgba(255, 255, 255, 0.25);
-            color: #8fbae0;
-        }
+}
 
-        /* Hero banner: show full image using an <img> so it isn't cropped */
+.main-content {
+    padding-top: 140px; 
+}
+
         .hero {
             width: 100%;
             position: relative;
-            margin-top: 0; /* sits under the sticky nav */
+            margin-top: 0;
             overflow: hidden;
         }
 
         .hero img.hero-img {
             width: 100%;
-            max-height: 70vh; /* batasi tinggi gambar agar tidak terlalu besar */
+            max-height: 70vh;
             height: auto;
             display: block;
             object-fit: cover;
@@ -81,7 +88,7 @@
 
         @media (max-width: 600px) {
             .hero img.hero-img {
-            max-height: 40vh; /* lebih kecil di layar kecil */
+            max-height: 40vh; 
             }
         }
 
@@ -108,7 +115,7 @@
             text-shadow: 0 2px 8px rgba(0,0,0,0.4);
         }
         
-/* ini animasi text */
+
     .overlay .typing{
     display: inline-block;
     overflow: hidden;
@@ -127,7 +134,7 @@
     50% { border-color: transparent; }
     }
 
-        /* Main Section - article-style container for Pengertian and content */
+
         .section {
             padding: 42px 36px;
             background: #ffffff;
@@ -138,7 +145,6 @@
             box-shadow: 0 8px 30px rgba(0,0,0,0.12);
         }
 
-        /* Article two-column layout */
         .section .layout { display:flex; gap:32px; align-items:flex-start; }
         .section .content { flex: 1 1 66%; min-width:0; }
         .section .sidebar { flex: 0 0 32%; }
@@ -148,23 +154,21 @@
         .section ul,
         .section li { color: #0a2342; }
 
-        /* Typography similar to BMKG profile */
         .lead { font-size: 20px; color: #2b2b2b; margin-bottom:18px; }
-        h1 { font-size: 34px; }
+        h1 { font-size: 20px; }
         h2 { font-size: 20px; margin-top:20px; color:#0a2342; }
         p, ul { font-size:16px; line-height:1.7; color:#333; }
 
-        /* Sidebar / fact box */
         .fact-box { background:#f8f9fb; padding:16px; border-radius:8px; }
 
-        /* Map in sidebar: full width */
+
         .peta-img { width:100%; height:auto; border-radius:8px; display:block; }
 
-        /* Map slider (CSS-only, no JavaScript) - show full images without cropping */
+
         .map-slider { position:relative; width:100%; border-radius:8px; overflow:visible; background:#fff; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
         .map-slider input[type="radio"] { display:none; }
         .map-slider .slides { position:relative; }
-        /* Slides flow in the document; only the checked slide is displayed so container height follows image */
+
         .map-slider .slide { display:none; width:100%; box-sizing:border-box; }
         .map-slider .slide img { width:100%; height:auto; object-fit:contain; display:block; }
         .map-slider .map-meta { padding:12px 14px; }
@@ -172,12 +176,11 @@
         .map-slider .map-title { font-size:15px; margin:0 0 8px 0; color:#0a2342; font-weight:700; line-height:1.2; }
         .map-slider .map-read { color:#1e40af; text-decoration:none; font-weight:600; }
 
-        /* Show only the checked slide; container height will follow image height (no cropping) */
+
         #map-slide-1:checked ~ .slides .s1,
         #map-slide-2:checked ~ .slides .s2,
         #map-slide-3:checked ~ .slides .s3 { display:block; }
 
-        /* Dots / controls */
         .map-slider .dots { display:flex; justify-content:center; gap:8px; padding:10px 0 12px; background:transparent; }
         .map-slider .dots label { width:10px; height:10px; border-radius:50%; background:#c7c7c7; display:inline-block; cursor:pointer; transition:all 160ms ease; }
         #map-slide-1:checked ~ .dots label[for="map-slide-1"],
@@ -197,43 +200,43 @@
             .section { padding:28px 20px; max-width: 95%; }
         }
 
-        /* Article typography and media styling */
+ 
         .hero .overlay h1 {
-            /* keep hero title large and centered */
             font-size: 34px;
             text-align: center;
         }
 
         .section h1 {
-            font-size: 28px;
+            font-size: 10px;
             text-align: left;
             margin-bottom: 16px;
             color: #0a2342;
             font-weight: 700;
         }
 
-        .section h2 {
-            margin-top: 24px;
-            color: #0a2342;
-            font-size: 35px;
-            font-weight: 700;
-        }
+.section p,
+.section ul {
+    line-height: 1.75;
+    font-size: 16px; 
+    color: #333;
+}
 
-        .section h3 {
-            margin-top: 20px;
-            color: #0a2342;
-            font-size: 30px;
-            font-weight: 700;
-        }
+.section h2 {
+    font-size: 24px;
+    margin-top: 24px;
+    color: #0a2342;
+    font-weight: 700;
+}
 
-        .section p,
-        .section ul {
-            line-height: 1.75;
-            font-size: 30px;
-            color: #333;
-        }
+.section h3 {
+    font-size: 20px; 
+    margin-top: 20px;
+    color: #0a2342;
+    font-weight: 700;
+}
 
-        /* Map and images inside article */
+
+
         .peta-img {
             width: 100%;
             border-radius: 8px;
@@ -242,9 +245,19 @@
             display: block;
         }
 
-        /* Site footer */
-        .site-footer { background: #0b2a57; color: #E0C58F; text-align: center; padding: 10px 16px; border-top: 6px solid #f2efe6; }
-        .site-footer .container { max-width: 1200px; margin: 0 auto; font-size:13px; }
+.site-footer { 
+    background: #0b2a57; 
+    text-align: center; 
+    padding: 30px 20px; 
+    color: #E0C58F; 
+}
+
+.site-footer p { 
+    color: #E0C58F; 
+    margin: 5px 0; 
+
+}
+
     </style>
 </head>
 <body>
@@ -253,13 +266,13 @@
     <div class="logo">AwasGempa.id</div>
     <ul class="nav-links">
         <li><a href="homepage.php">Beranda</a></li>
-        <li><a href="tentang-gempa-bumi.php" class="active">Tentang Gempa Bumi</a></li>
+        <li><a href="tentanggempa.php" class="active">Tentang Gempa Bumi</a></li>
         <li><a href="penyebab.php">Penyebab</a></li>
         <li><a href="dampak.php">Dampak</a></li>
-        <li><a href="penanggulangan.php">Penanggulangan & Mitigasi</a></li>
+        <li><a href="mitigasi.php">Penanggulangan Dan Mitigasi</a></li>
     </ul>
 </nav>
-<!-- Hero banner: background image with only the main title -->
+
 <div class="hero">
     <img src="gempabumi.jpg" alt="Gambar Gempa Bumi" class="hero-img">
     <div class="overlay">
@@ -392,11 +405,10 @@
     </div>
 </div>
 
-        <footer class="site-footer" role="contentinfo">
-            <div class="container">
-                <p style="color: white;">© 2025 AwasGempa.id | Edukasi Mitigasi Bencana Alam Indonesia</p>
-            </div>
-        </footer>
+<footer class="site-footer">
+    <p> &copy; 2023 AwasGempa.id - Semua Hak Dilindungi</p>
+    <p>Website Informasi Gempa Bumi Indonesia</p>
+</footer>
 
     </body>
     </html>
