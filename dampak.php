@@ -7,15 +7,9 @@
     <title>AwasGempa.id - Dampak Gempa Bumi</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Reset dan font */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
 
-        /* Variabel warna sesuai palet */
+
+
         :root {
             --sapphire: #305070;
             --royal-blue: #112260;
@@ -24,59 +18,64 @@
             --chellstone: #D9CBC2;
         }
 
-        body {
-            background-color: var(--swan-wing);
-            overflow-x: hidden;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+} 
 
-        /* Navbar */
-        .floating-nav {
-            position: sticky;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(17, 34, 80, 0.95);
-            backdrop-filter: blur(8px);
-            padding: 2rem 3rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-            z-index: 1000;
-        }
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F5F0E9;
+    color: #112250;
+}
 
-        .floating-nav .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #E0C58F;
-        }
 
-        .floating-nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1.5rem;
-        }
+.floating-nav {
+    position: sticky;
+    top: 0;                
+    left: 0;
+    width: 100%;          
+    background-color: rgba(17, 34, 80, 0.95);
+    backdrop-filter: blur(8px);                 
+     padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    z-index: 1000;
+}
 
-        .floating-nav ul li a {
-            color: #E0C58F;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 8px 14px;
-            border-radius: 10px;
-            transition: 0.3s;
-        }
+.floating-nav .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #E0C58F;
+}
 
-        .floating-nav ul li a:hover,
-        .floating-nav ul li a.active {
+.floating-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.floating-nav ul li a {
+    color: #E0C58F;
+    text-decoration: none;
+    font-weight: 500;
+      padding: 8px 14px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.floating-nav ul li a:hover,
+.floating-nav ul li a.active {
+    color:#8fbae0; 
             background-color: rgba(255, 255, 255, 0.25);
-            color: #8fbae0;
-        }
+}
 
-        .main-content {
-            padding-top: 140px;
-        }
 
-        /* Header halaman */
         .page-header {
             background: linear-gradient(to right, var(--royal-blue), var(--sapphire));
             color: var(--swan-wing);
@@ -138,14 +137,12 @@
             }
         }
 
-        /* Container konten */
         .content-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
         }
 
-        /* Bagian dampak */
         .impact-section {
             margin-bottom: 4rem;
             background-color: white;
@@ -265,7 +262,7 @@
             font-size: 0.9rem;
         }
 
-        /* Modal untuk gambar */
+
         .modal {
             display: none;
             position: fixed;
@@ -319,7 +316,6 @@
             color: var(--quicksand);
         }
 
-        /* Bagian contoh bencana */
         .disaster-example {
             background-color: white;
             border-radius: 12px;
@@ -443,19 +439,17 @@
 </head>
 
 <body>
-    <!-- Navbar -->
     <nav class="floating-nav">
         <div class="logo">AwasGempa.id</div>
         <ul class="nav-links">
             <li><a href="homepage.php">Beranda</a></li>
-            <li><a href="tentang-gempa-bumi.php">Tentang Gempa Bumi</a></li>
+            <li><a href="tentanggempa.php">Tentang Gempa Bumi</a></li>
             <li><a href="penyebab.php">Penyebab</a></li>
             <li><a href="dampak.php" class="active">Dampak</a></li>
-            <li><a href="penanggulangan.php">Penanggulangan Dan Mitigasi</a></li>
+            <li><a href="mitigasi.php">Penanggulangan Dan Mitigasi</a></li>
         </ul>
     </nav>
 
-    <!-- Modal untuk gambar -->
     <div class="modal" id="imageModal">
         <span class="close-modal">&times;</span>
         <div class="modal-content">
@@ -463,17 +457,14 @@
         </div>
     </div>
 
-    <!-- Konten Utama -->
+
     <div class="main-content">
-        <!-- Header Halaman -->
         <header class="page-header">
             <h1>Dampak Gempa Bumi</h1>
             <p>Gempa bumi tidak hanya menyebabkan kerusakan fisik, tetapi juga memberikan dampak yang luas terhadap kehidupan sosial, ekonomi, lingkungan, dan psikologis masyarakat.</p>
         </header>
-
-        <!-- Container Konten -->
         <div class="content-container">
-            <!-- Dampak Fisik -->
+
             <section class="impact-section">
                 <div class="section-header">
                     <i class="fas fa-building"></i>
@@ -507,7 +498,7 @@
                 </div>
             </section>
 
-            <!-- Dampak Sosial dan Ekonomi -->
+
             <section class="impact-section">
                 <div class="section-header">
                     <i class="fas fa-users"></i>
@@ -542,7 +533,7 @@
                 </div>
             </section>
 
-            <!-- Dampak Lingkungan dan Psikologis -->
+
             <section class="impact-section">
                 <div class="section-header">
                     <i class="fas fa-globe-asia"></i>
@@ -577,7 +568,7 @@
                 </div>
             </section>
 
-            <!-- Contoh Bencana Besar di Indonesia -->
+
             <section class="disaster-example">
                 <div class="section-header">
                     <i class="fas fa-landmark"></i>
@@ -619,14 +610,14 @@
         </div>
     </div>
 
-    <!-- Footer -->
+
     <footer class="footer">
         <p>&copy; 2023 AwasGempa.id - Semua Hak Dilindungi</p>
         <p>Website Informasi Gempa Bumi Indonesia</p>
     </footer>
 
     <script>
-        // Animasi untuk section saat scroll
+
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -644,13 +635,12 @@
             observer.observe(section);
         });
 
-        // Accordion untuk section header
+
         document.querySelectorAll('.section-header').forEach(header => {
             header.addEventListener('click', function() {
                 const content = this.nextElementSibling;
                 const isActive = this.classList.contains('active');
 
-                // Tutup semua section yang terbuka
                 document.querySelectorAll('.section-header').forEach(h => {
                     h.classList.remove('active');
                 });
@@ -658,7 +648,6 @@
                     c.classList.remove('active');
                 });
 
-                // Buka section yang diklik jika sebelumnya tidak aktif
                 if (!isActive) {
                     this.classList.add('active');
                     content.classList.add('active');
@@ -666,11 +655,11 @@
             });
         });
 
-        // Buka section pertama secara default
+
         document.querySelector('.section-header').classList.add('active');
         document.querySelector('.section-content').classList.add('active');
 
-        // Modal untuk gambar
+
         const modal = document.getElementById('imageModal');
         const modalImage = document.getElementById('modalImage');
 
@@ -698,7 +687,7 @@
             }
         });
 
-        // Tutup modal dengan tombol ESC
+
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape' && modal.classList.contains('active')) {
                 modal.classList.remove('active');
@@ -707,5 +696,4 @@
         });
     </script>
 </body>
-
 </html>
