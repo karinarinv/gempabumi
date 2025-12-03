@@ -291,36 +291,33 @@ body {
     </div>
 
     <div class="content-section">
-        <h2 class="step-heading">1. Langkah-langkah Sebelum Gempa</h2>
+        <h2 class="step-heading">1. Mitigasi Bencana</h2>
         <div class="grid-container">
  
             <div class="mitigation-card">
-                <h3>Mitigasi Struktural</h3>
+                <h3>Pra Bencana</h3>
                 <ul>
-                    <li>Pastikan struktur bangunan Anda sesuai dengan Standar Nasional Indonesia (SNI) ketahanan gempa.</li>
-                    <li>Periksa dan perkuat kembali struktur bangunan, termasuk pondasi, balok, dan kolom.</li>
-                    <li>Jauhi pembangunan di zona bahaya, seperti di atas patahan aktif atau lereng yang curam.</li>
-                    <li>Gunakan material bangunan yang berkualitas dan ringan namun kuat.</li>
+                    <li>Menyiapakan rencana untuk penyelamatan diri apabila gempa bumi terjadi.Menyiapakan rencana untuk penyelamatan diri apabila gempa bumi terjadi..</li>
+                    <li>Melakukan latihan yang dapat bermanfaat dalam menghadapi reruntuhan saat gempa bumi, seperti merunduk, perlindungan terhadap kepala, berpegangan ataupun dengan bersembunyi di bawah meja..</li>
+                    <li>Menyiapkan alat pemadam kebakaran, alat keselamatan standar, dan persediaan obat-obatan.</li>
                 </ul>
             </div>
 
             <div class="mitigation-card">
-                <h3>Kesiapan Internal Rumah</h3>
+                <h3>Saat Bencana</h3>
                 <ul>
-                    <li>Amankan benda-benda berat (lemari, rak buku) dengan mengikatnya ke dinding untuk mencegah roboh.</li>
-                    <li>Letakkan benda-benda berat di bagian bawah rak.</li>
-                    <li>Identifikasi dan amankan area rawan pecahan (kaca, cermin) dan bahan kimia berbahaya.</li>
-                    <li>Siapkan Tas Siaga Bencana (Survival Kit) berisi makanan, air, obat-obatan, senter, dan radio.</li>
+                  <li>Berlindung di bawah meja untuk menghindari dari benda-benda yang mungkin jatuh.</li>
+                    <li>Tetap lindungi kepala dan segera menuju ke lapangan terbuka.</li>
+                    <li>Hindari menggunakan lift dan eskalator, dan gunakan tangga darurat.</li>
                 </ul>
             </div>
 
             <div class="mitigation-card">
-                <h3>Edukasi dan Pelatihan</h3>
+                <h3>Pasca Bencana</h3>
                 <ul>
-                    <li>Tentukan dan latih jalur evakuasi yang aman di rumah dan tempat kerja/sekolah.</li>
-                    <li>Pelajari dan praktekkan teknik "Drop, Cover, and Hold On" (Tiarap, Lindungi, dan Bertahan). [Image of Drop Cover and Hold On]</li>
-                    <li>Tentukan Titik Kumpul (Assembly Point) di luar ruangan, jauh dari bangunan, pohon, dan kabel listrik.</li>
-                    <li>Ajarkan seluruh anggota keluarga cara mematikan listrik, gas, dan air.</li>
+                   <li>Tetap waspada terhadap gempa bumi susulan.</li>
+                    <li>Periksa keberadaan api dan potensi terjadinya bencana kebakaran.</li>
+                    <li>Berdirilah di tempat terbuka jauh dari gedung dan instalasi listrik dan air.</li>
                 </ul>
             </div>
         </div>
@@ -350,16 +347,19 @@ body {
             </div>
         </div>
 
-        <h2 class="step-heading">3. Tindakan Setelah Gempa</h2>
+        <h2 class="step-heading">3. Penggulangan Gempa bumi</h2>
         <div class="grid-container">
             <div class="mitigation-card">
                 <h3>Langkah Pasca Gempa</h3>
                 <ul>
-                    <li>Tetap waspada terhadap gempa susulan (aftershock).</li>
-                    <li>Periksa cedera diri sendiri dan orang lain, berikan pertolongan pertama jika memungkinkan.</li>
-                    <li>Periksa kerusakan bangunan (gas, listrik, air) dan matikan jika ada kebocoran atau kerusakan.</li>
-                    <li>Dengarkan informasi dari radio atau sumber resmi dan ikuti instruksi evakuasi.</li>
-                    <li>Jangan memasuki bangunan yang sudah rusak parah.</li>
+                   <li>Periksa penggunaan listrik dan gas.</li>
+                    <li>Mendirikan bangunan sesuai aturan baku (tahan gempa).</li>
+                    <li>Menyimpan persediaan air, makanan, obat-obatan, dan peralatan darurat.</li>
+                    <li>Kenali jalur evakuasi.</li>
+                    <li>empatkan perabotan pada tempat yang proporsional.</li>
+                    <li>Kenali lokasi bangunan tempat Anda tinggal.</li>
+                    <li>Catat nomor telepon penting.</li>
+                    <li>Ikuti kegiatan simulasi mitigasi bencana gempa.</li>
                 </ul>
             </div>
         </div>
@@ -373,3 +373,4 @@ body {
 </body>
 
 </html>
+
